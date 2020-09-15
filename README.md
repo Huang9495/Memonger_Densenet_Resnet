@@ -8,6 +8,14 @@ This project contains a series of python script to give sublinear memory plans o
 
 Thank for [tqchen](https://github.com/dmlc/mxnet-memonger), we improve the utilization of memory space when training the recognition via Resnet in Mxnet. Besides, we have further improved the memory space utilization of Densenet and Mobilenet-v2 through allocating memory reasonably.
 
+*Experiments:
+opt| Network	| GPU | Speed | Mem for Per FM (old) | Mem for Per FM (new)
+-- | ---- | ---- | ---- | ---- | ---- 
+0	| Resnet-50	| 4 |	517 samples/s | 30537 MB | 14466 MB 
+1	| Resnet-50	| 4	| 421 samples/s | 15896 MB | 7530 MB
+2	| Densenet201	| 4	| 341 samples/s | 125202 MB | 35470 MB
+3	| Densenet201	| 4	| 363 samples/s | 26084 MB | 7389 MB
+
 *Note: Due to time constraints, relevant documents of Mobilenet-v2 will be updated in the near future
 
 ### ResNet/LSTM
